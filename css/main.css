@@ -58,11 +58,14 @@ nav {
   transition-duration: 0s, 0.3s;
   transition-delay: 0.3s, 0s;
   transition-timing-function: ease-in-out;
+  display: flex;
+  align-items: center;
 }
 nav svg {
   height: 64px;
   width: auto;
-  position: fixed;
+  position: absolute;
+  top: 0;
   right: 0;
   padding: 0.75em;
 }
@@ -73,12 +76,6 @@ nav ul {
   margin: 0;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 nav ul li {
   text-align: center;
