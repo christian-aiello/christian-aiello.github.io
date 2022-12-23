@@ -28,7 +28,6 @@ header {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: $primary-bg;
-  transition: 0.25s ease-in-out;
 
   section {
     display: flex;
@@ -62,7 +61,7 @@ header {
     font-family: "Nabla";
     font-size: 2.5rem;
     padding-right: 1.25rem;
-    transition: 0.25s ease-in-out;
+    transition: font-size 0.25s linear;
   }
 
   a {
@@ -74,7 +73,7 @@ header {
   svg.open {
     border-radius: 17px;;
     box-shadow: 3px 3px 3px #101014, -3px -3px 3px #24242e;
-    transition: 0.25s ease-in-out;
+    transition: scale 0.25s linear;
 
     &:active {
       box-shadow: inset 3px 3px 3px #101014, inset -3px -3px 3px #24242e;
@@ -117,7 +116,10 @@ nav {
     right: 0;
     padding: 0.75em;
     z-index: 999;
-    transition: 0.25s ease-in-out;
+    transition-property: scale, padding;
+    transition-duration: 0.25s, 0.25s;
+    transition-delay: 0s, 0s;
+    transition-timing-function: linear;
   }
 
   ul {
@@ -130,7 +132,7 @@ nav {
     li {
       text-align: center;
       font-size: 4vh;
-      transition: 0.25s ease-in-out;
+      transition: font-size 0.25s linear;
     }
 
     a {
@@ -161,7 +163,6 @@ nav {
 
 .scrolled {
   #c_logo {
-    font-family: "Nabla";
     font-size: 1.75rem;
     padding-right: 1.25rem;
   }
