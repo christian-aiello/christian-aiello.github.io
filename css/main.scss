@@ -13,12 +13,6 @@ body {
   margin: 0;
 }
 
-main {
-  img {
-    width: 100%;
-  }
-}
-
 header {
   position: sticky;
   top: 0;
@@ -100,12 +94,13 @@ nav {
     }
 
     a {
-      color: white;
+      color: #ccc;
       display: block;
       padding: 0.75em;
 
       &:hover {
-        color: #ccc;
+        color: #fff;
+        text-decoration: underline;
       }
     }
   }
@@ -151,6 +146,22 @@ nav {
       li {
         text-align: center;
         font-size: 1em;
+        margin: 0 0.2em;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #22222c;
+        }
+      }
+
+      a {
+        color: #fff;
+        display: block;
+        padding: 0.75em;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
