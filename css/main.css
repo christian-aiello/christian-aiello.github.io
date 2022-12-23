@@ -25,6 +25,7 @@ header {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: #1a1a21;
+  transition: 0.25s ease-in-out;
 }
 header section {
   display: flex;

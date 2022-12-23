@@ -28,6 +28,7 @@ header {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: $primary-bg;
+  transition: 0.25s ease-in-out;
 
   section {
     display: flex;
