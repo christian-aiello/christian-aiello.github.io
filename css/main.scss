@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+section.logos {
+  margin-right: 0.75em;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -29,11 +33,34 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a.logo {
+      padding: 0;
+    }
+
+    svg.logo {
+      display: none;
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      padding: 10px;
+
+      stroke: $primary;
+
+      path {
+        fill: $primary;
+      }
+    }
+
+    a {
+      font-size: 1.2em;
+    }
   }
 
-  #logo {
+  #c_logo {
     font-family: "Nabla";
     font-size: 2.5rem;
+    padding-right: 1.25rem;
   }
 
   a {
@@ -42,9 +69,19 @@ header {
     text-decoration: none;
   }
 
+  svg.open {
+    border-radius: 17px;
+    background: #1a1a21;
+    box-shadow: 3px 3px 3px #101014, -3px -3px 3px #24242e;
+
+    &:active {
+      box-shadow: inset 3px 3px 3px #101014, inset -3px -3px 3px #24242e;
+    }
+  }
+
   svg {
     stroke: white;
-    padding: 0 0.5em;
+    padding: 0.5em 0.5em;
 
     path {
       fill: white;
@@ -54,7 +91,7 @@ header {
 
 nav {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   background-color: rgba($color: #ffa500, $alpha: 0.5);
   width: 100%;
   height: 100%;
@@ -77,6 +114,7 @@ nav {
     top: 0;
     right: 0;
     padding: 0.75em;
+    z-index: 999;
   }
 
   ul {
@@ -117,9 +155,27 @@ nav {
   opacity: 0%;
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 500px) {
+  header {
+    section {
+      svg.logo {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1020px) {
   .open {
     display: none;
+  }
+
+  header {
+    section {
+      svg.logo {
+        padding: 5px;
+      }
+    }
   }
 
   nav {
@@ -143,22 +199,25 @@ nav {
 
       li {
         text-align: center;
-        font-size: 1em;
-        margin: 0 0.2em;
-        border-radius: 10px;
+        font-size: 0.8em;
+        margin: 0 0.4em;
+        border-radius: 17px;
+        background: #1a1a21;
+        box-shadow: 3px 3px 3px #101014, -3px -3px 3px #24242e;
 
-        &:hover {
-          background-color: #22222c;
+        &:active {
+          box-shadow: inset 3px 3px 3px #101014, inset -3px -3px 3px #24242e;
         }
       }
 
       a {
-        color: #fff;
+        color: #ccc;
         display: block;
         padding: 0.75em;
 
         &:hover {
           text-decoration: none;
+          color: #fff;
         }
       }
     }
