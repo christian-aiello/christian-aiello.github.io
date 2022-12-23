@@ -52,6 +52,7 @@ header #c_logo {
   font-family: "Nabla";
   font-size: 2.5rem;
   padding-right: 1.25rem;
+  transition: 0.25s ease-in-out;
 }
 header a {
   color: white;
@@ -60,8 +61,8 @@ header a {
 }
 header svg.open {
   border-radius: 17px;
-  background: #1a1a21;
   box-shadow: 3px 3px 3px #101014, -3px -3px 3px #24242e;
+  transition: 0.25s ease-in-out;
 }
 header svg.open:active {
   box-shadow: inset 3px 3px 3px #101014, inset -3px -3px 3px #24242e;
@@ -100,6 +101,7 @@ nav svg {
   right: 0;
   padding: 0.75em;
   z-index: 999;
+  transition: 0.25s ease-in-out;
 }
 nav ul {
   position: absolute;
@@ -112,6 +114,7 @@ nav ul {
 nav ul li {
   text-align: center;
   font-size: 4vh;
+  transition: 0.25s ease-in-out;
 }
 nav ul a {
   color: #ccc;
@@ -136,12 +139,33 @@ nav ul a:hover {
   opacity: 0%;
 }
 
+.scrolled #c_logo {
+  font-family: "Nabla";
+  font-size: 1.75rem;
+  padding-right: 1.25rem;
+}
+.scrolled svg.open {
+  scale: 0.8;
+}
+.scrolled section nav svg {
+  scale: 0.8;
+  padding-top: 0.25em;
+}
+
+main {
+  height: 200vh;
+  box-shadow: inset 0px 20px 20px #101014;
+}
+
 @media only screen and (min-width: 500px) {
   header section svg.logo {
     display: block;
   }
 }
 @media only screen and (min-width: 1020px) {
+  .scrolled ul li {
+    font-size: 0.75em;
+  }
   .open {
     display: none;
   }
@@ -171,7 +195,6 @@ nav ul a:hover {
     font-size: 0.8em;
     margin: 0 0.4em;
     border-radius: 17px;
-    background: #1a1a21;
     box-shadow: 3px 3px 3px #101014, -3px -3px 3px #24242e;
   }
   nav ul li:active {
