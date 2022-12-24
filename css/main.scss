@@ -21,7 +21,7 @@ section.logos {
 }
 
 .wrapper {
-  height: 100%;
+  height: stretch;
 }
 
 header {
@@ -257,7 +257,6 @@ main {
   main {
     section {
       padding: 0 15%;
-      width: 80vh;
     }
 
     section.about {
