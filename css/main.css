@@ -2,6 +2,8 @@
 html {
   height: 100%;
   background-color: #1a1a21;
+  color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +46,12 @@ header section svg.logo {
 }
 header section svg.logo path {
   fill: #ffa500;
+}
+header section svg.logo:hover {
+  stroke: white;
+}
+header section svg.logo:hover path {
+  fill: white;
 }
 header section a {
   font-size: 1.2em;
@@ -155,8 +163,76 @@ nav ul a:hover {
 }
 
 main {
-  height: 200vh;
-  box-shadow: inset 0px 20px 20px #101014;
+  height: 100vh;
+}
+main section {
+  padding: 0 2rem;
+}
+main section.about {
+  height: calc(100vh - 82px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.about a {
+  padding: 1em 1.618em;
+  color: #ffa500;
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 15px;
+  border-color: #ffa500;
+  border-style: solid;
+  width: 66%;
+  text-align: center;
+}
+main section.about a:hover {
+  color: #fff;
+  background-color: rgba(255, 166, 0, 0.6509803922);
+}
+main section.about h1 {
+  font-size: min(7vw, 4em);
+  margin: auto 0;
+}
+main section.about h1 span {
+  color: #ffa500;
+}
+main section.about p {
+  font-size: 1.2em;
+}
+main section.experience {
+  height: calc(100vh - 82px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.experience a {
+  padding: 1em 1.618em;
+  color: #ffa500;
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 15px;
+  border-color: #ffa500;
+  border-style: solid;
+  width: 66%;
+  text-align: center;
+}
+main section.experience a:hover {
+  color: #fff;
+  background-color: rgba(255, 166, 0, 0.6509803922);
+}
+main section.experience h1 {
+  font-size: min(7vw, 4em);
+  margin: auto 0;
+}
+main section.experience h1 span {
+  color: #ffa500;
+}
+main section.experience p {
+  font-size: 1.2em;
 }
 
 @media only screen and (min-width: 500px) {
@@ -165,6 +241,17 @@ main {
   }
 }
 @media only screen and (min-width: 1020px) {
+  main section {
+    padding: 0 15%;
+    width: 80vh;
+  }
+  main section.about {
+    flex-direction: row;
+  }
+  main section.about a {
+    width: 4em;
+    margin-left: 1.5em;
+  }
   .scrolled ul li {
     font-size: 0.75em;
   }
