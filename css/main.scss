@@ -13,7 +13,7 @@ html {
 body {
   font-family: "Lato";
   margin: 0;
-  height: fill-available;
+  height: 100%;
 }
 
 section.logos {
@@ -21,7 +21,7 @@ section.logos {
 }
 
 .wrapper {
-  height: stretch;
+  height: 100%;
 }
 
 header {
@@ -197,7 +197,7 @@ nav {
 }
 
 main {
-  height: calc(100% - 82px);
+  height: calc(100% - 91px);
 
   section {
     padding: 0 2rem;
@@ -256,7 +256,8 @@ main {
 @media only screen and (min-width: 1020px) {
   main {
     section {
-      padding: 0 15%;
+      padding: 0 min(15%, calc(50vw - 25rem));
+      width: 50rem;
     }
 
     section.about {

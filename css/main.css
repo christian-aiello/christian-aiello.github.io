@@ -9,9 +9,7 @@ html {
 body {
   font-family: "Lato";
   margin: 0;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
+  height: 100%;
 }
 
 section.logos {
@@ -19,9 +17,7 @@ section.logos {
 }
 
 .wrapper {
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: stretch;
+  height: 100%;
 }
 
 header {
@@ -172,7 +168,7 @@ nav ul a:hover {
 }
 
 main {
-  height: calc(100% - 82px);
+  height: calc(100% - 91px);
 }
 main section {
   padding: 0 2rem;
@@ -218,7 +214,8 @@ main section.about p {
 }
 @media only screen and (min-width: 1020px) {
   main section {
-    padding: 0 15%;
+    padding: 0 min(15%, 50vw - 25rem);
+    width: 50rem;
   }
   main section.about {
     flex-direction: row;
