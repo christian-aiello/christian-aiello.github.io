@@ -21,8 +21,9 @@ section.logos {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: calc(100vw - (100vw - 100%));
+  box-sizing: border-box;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -32,6 +33,7 @@ header {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: #1a1a21;
+  z-index: 2;
 }
 header section {
   display: flex;
@@ -66,6 +68,7 @@ header #c_logo {
   font-size: 2.5rem;
   padding-right: 1.25rem;
   transition: font-size 0.25s linear;
+  color: white;
 }
 header a {
   color: white;
@@ -105,6 +108,8 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: row;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 nav svg {
   height: 64px;
@@ -172,8 +177,10 @@ main {
 }
 main section {
   padding: 0 2rem;
+  scroll-margin-top: 71px;
 }
 main section.about {
+  margin-top: 91px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -197,7 +204,7 @@ main section.about a:hover {
   background-color: rgba(255, 166, 0, 0.6509803922);
 }
 main section.about h1 {
-  font-size: min(7vw, 4em);
+  font-size: min(8vw, 4em);
   margin: auto 0;
 }
 main section.about h1 span {
@@ -206,18 +213,108 @@ main section.about h1 span {
 main section.about p {
   font-size: 1.2em;
 }
+main section.projects {
+  background-color: #1a1a21;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+main section.projects h1 {
+  margin: 0 0;
+  margin-bottom: 2rem;
+  font-size: min(8vw, 3em);
+  width: auto;
+}
+main section.projects h1 span {
+  color: #ffa500;
+}
+main section.projects div.project-cards {
+  display: grid;
+  grid-gap: 2em;
+}
+main section.projects div.project-cards .card {
+  border-radius: 17px;
+  box-shadow: 3px 3px 10px #101014, -3px -3px 10px #24242e;
+  padding: 2rem;
+}
+main section.projects div.project-cards .card p {
+  font-size: 1.2em;
+}
+main section.projects div.project-cards .card p.technologies {
+  font-size: 1em;
+  margin-bottom: 0;
+  color: #ccc;
+}
+main section.projects div.project-cards .card img {
+  width: 50%;
+  min-width: min(225px, 100%);
+  border-radius: 17px;
+  border-color: #ccc;
+  border-style: solid;
+}
+main section.projects div.project-cards .card div.project-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+main section.projects div.project-cards .card .card-header {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+main section.projects div.project-cards .card .card-header a.logo {
+  padding: 0;
+}
+main section.projects div.project-cards .card .card-header svg.logo {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  padding: 16px;
+  stroke: #ffa500;
+}
+main section.projects div.project-cards .card .card-header svg.logo path {
+  fill: #ffa500;
+}
+main section.projects div.project-cards .card .card-header svg.logo:hover {
+  stroke: white;
+}
+main section.projects div.project-cards .card .card-header svg.logo:hover path {
+  fill: white;
+}
+main section.projects div.project-cards .card h1 {
+  margin: 0 0;
+  font-size: min(6vw, 1.55em);
+  width: auto;
+}
+main section.projects div.project-cards .card h1 span {
+  color: #ffa500;
+}
+main section.awards h1 {
+  margin: 0 0;
+  margin-bottom: 2rem;
+  font-size: min(8vw, 3em);
+  width: auto;
+}
+main section.awards h1 span {
+  color: #ffa500;
+}
 
 @media only screen and (min-width: 500px) {
   header section svg.logo {
     display: block;
   }
+  main section.projects div.project-cards {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
 }
 @media only screen and (min-width: 1020px) {
   main section {
-    padding: 0 min(15%, 50vw - 25rem);
-    width: 50rem;
+    padding: 0 min(15%, 50vw - 26rem);
   }
   main section.about {
+    width: 50rem;
     flex-direction: row;
   }
   main section.about a {

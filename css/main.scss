@@ -25,7 +25,9 @@ section.logos {
 }
 
 header {
-  position: sticky;
+  position: fixed;
+  width: calc(100vw - calc(100vw - 100%));
+  box-sizing: border-box;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -35,6 +37,7 @@ header {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: $primary-bg;
+  z-index: 2;
 
   section {
     display: flex;
@@ -77,6 +80,7 @@ header {
     font-size: 2.5rem;
     padding-right: 1.25rem;
     transition: font-size 0.25s linear;
+    color: white;
   }
 
   a {
@@ -122,6 +126,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: row;
+  backdrop-filter: blur(15px);
 
   svg {
     height: 64px;
@@ -201,9 +206,11 @@ main {
 
   section {
     padding: 0 2rem;
+    scroll-margin-top: 71px;
   }
 
   section.about {
+    margin-top: 91px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -229,7 +236,7 @@ main {
     }
 
     h1 {
-      font-size: min(7vw, 4em);
+      font-size: min(8vw, 4em);
       margin: auto 0;
 
       span {
@@ -239,6 +246,115 @@ main {
 
     p {
       font-size: 1.2em;
+    }
+  }
+
+  section.projects {
+    background-color: $primary-bg;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin: 0 0;
+      margin-bottom: 2rem;
+      font-size: min(8vw, 3em);
+      width: auto;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    div.project-cards {
+      display: grid;
+      grid-gap: 2em;
+
+      .card {
+        border-radius: 17px;
+        box-shadow: 3px 3px 10px #101014, -3px -3px 10px #24242e;
+        padding: 2rem;
+
+        p {
+          font-size: 1.2em;
+        }
+
+        p.technologies {
+          font-size: 1em;
+          margin-bottom: 0;
+          color: #ccc;
+        }
+
+        img {
+         width: 50%;
+         min-width: min(225px, 100%);
+         border-radius: 17px;
+         border-color: #ccc;
+         border-style: solid;
+        }
+
+        div.project-img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          max-width: 100%;
+
+          a.logo {
+            padding: 0;
+          }
+      
+          svg.logo {
+            width: 24px;
+            height: auto;
+            vertical-align: middle;
+            padding: 16px;
+      
+            stroke: $primary;
+      
+            path {
+              fill: $primary;
+            }
+      
+            &:hover {
+              stroke: white;
+      
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+
+        h1 {
+          margin: 0 0;
+          font-size: min(6vw, 1.55em);
+          width: auto;
+    
+          span {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  section.awards {
+    h1 {
+      margin: 0 0;
+      margin-bottom: 2rem;
+      font-size: min(8vw, 3em);
+      width: auto;
+
+      span {
+        color: $primary;
+      }
     }
   }
 }
@@ -251,16 +367,24 @@ main {
       }
     }
   }
+
+  main {
+    section.projects {
+      div.project-cards {
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        }
+    }
+  }
 }
 
 @media only screen and (min-width: 1020px) {
   main {
     section {
-      padding: 0 min(15%, calc(50vw - 25rem));
-      width: 50rem;
+      padding: 0 min(15%, calc(50vw - 26rem));
     }
 
     section.about {
+      width: 50rem;
       flex-direction: row;
 
       a {
@@ -268,6 +392,7 @@ main {
         margin-left: 1.5em;
       }
     }
+
   }
   .scrolled {
     ul {
