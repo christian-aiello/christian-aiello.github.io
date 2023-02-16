@@ -402,33 +402,34 @@ main {
     padding-top: 6em;
     padding-bottom: 2em;
 
-    div.award-cards {
+    div.extracurricular-cards {
       display: flex;
       flex-direction: column;
       padding-top: 1em;
     }
 
-    div.award {
+    div.extracurricular {
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 3px 0;
+      padding: 5px 0;   
 
       a {
+        padding-left:  4px;
+
         svg {
-          padding-left: 4px;
           &:hover {
             stroke: white;
     
             path {
               fill: white;
             }
-
+  
             rect {
               fill: white;
             }
           }
-        }  
+        }
       }
 
       p {

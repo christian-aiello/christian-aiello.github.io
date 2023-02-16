@@ -338,47 +338,47 @@ main section.extracurriculars {
   padding-top: 6em;
   padding-bottom: 2em;
 }
-main section.extracurriculars div.award-cards {
+main section.extracurriculars div.extracurricular-cards {
   display: flex;
   flex-direction: column;
   padding-top: 1em;
 }
-main section.extracurriculars div.award {
+main section.extracurriculars div.extracurricular {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 3px 0;
+  padding: 5px 0;
 }
-main section.extracurriculars div.award a svg {
+main section.extracurriculars div.extracurricular a {
   padding-left: 4px;
 }
-main section.extracurriculars div.award a svg:hover {
+main section.extracurriculars div.extracurricular a svg:hover {
   stroke: white;
 }
-main section.extracurriculars div.award a svg:hover path {
+main section.extracurriculars div.extracurricular a svg:hover path {
   fill: white;
 }
-main section.extracurriculars div.award a svg:hover rect {
+main section.extracurriculars div.extracurricular a svg:hover rect {
   fill: white;
 }
-main section.extracurriculars div.award p {
+main section.extracurriculars div.extracurricular p {
   margin: 0;
   font-size: 1em;
 }
-main section.extracurriculars div.award span {
+main section.extracurriculars div.extracurricular span {
   font-weight: bold;
 }
-main section.extracurriculars div.award svg {
+main section.extracurriculars div.extracurricular svg {
   width: 20px;
   height: auto;
   vertical-align: middle;
   padding-right: 16px;
   stroke: #ffa500;
 }
-main section.extracurriculars div.award svg path {
+main section.extracurriculars div.extracurricular svg path {
   fill: #ffa500;
 }
-main section.extracurriculars div.award svg rect {
+main section.extracurriculars div.extracurricular svg rect {
   fill: #ffa500;
 }
 main section.extracurriculars h1 {
