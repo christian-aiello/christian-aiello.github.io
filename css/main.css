@@ -312,7 +312,6 @@ main section.awards div.award {
 main section.awards div.award p {
   margin: 0;
   width: 100%;
-  font-size: 1em;
 }
 main section.awards div.award span {
   font-weight: bold;
@@ -350,6 +349,11 @@ main section.extracurriculars div.award {
   align-items: center;
   padding: 3px 0;
 }
+main section.extracurriculars div.award div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 main section.extracurriculars div.award a svg {
   padding-left: 4px;
 }
@@ -364,10 +368,6 @@ main section.extracurriculars div.award a svg:hover rect {
 }
 main section.extracurriculars div.award p {
   margin: 0;
-  font-size: 1em;
-}
-main section.extracurriculars div.award p.nolink {
-  width: 100%;
 }
 main section.extracurriculars div.award span {
   font-weight: bold;

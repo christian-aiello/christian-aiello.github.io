@@ -362,13 +362,11 @@ main {
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 5px 0;
-      
+      padding: 5px 0;   
 
       p {
         margin: 0;
         width: 100%;
-        font-size: 1em;
       }
 
       span {
@@ -416,6 +414,12 @@ main {
       align-items: center;
       padding: 3px 0;
 
+      div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
       a {
         svg {
           padding-left: 4px;
@@ -435,11 +439,6 @@ main {
 
       p {
         margin: 0;
-        font-size: 1em;
-      }
-
-      p.nolink {
-        width: 100%;
       }
 
       span {
@@ -597,7 +596,6 @@ footer {
       font-family: "Nabla";
       padding-top: 0.5rem;
     }
-
     section {
       svg.logo {
         padding: 5px;
