@@ -349,7 +349,7 @@ main section.extracurriculars div.award {
   align-items: center;
   padding: 3px 0;
 }
-main section.extracurriculars div.award div {
+main section.extracurriculars div.award div.link {
   display: flex;
   flex-direction: row;
   width: 100%;
