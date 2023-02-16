@@ -311,6 +311,7 @@ main section.awards div.award {
 }
 main section.awards div.award p {
   margin: 0;
+  font-size: 1em;
 }
 main section.awards div.award span {
   font-weight: bold;
