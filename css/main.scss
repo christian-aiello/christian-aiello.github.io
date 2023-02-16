@@ -366,7 +366,6 @@ main {
 
       p {
         margin: 0;
-        width: 100%;
       }
 
       span {
@@ -414,12 +413,6 @@ main {
       align-items: center;
       padding: 3px 0;
 
-      div.link {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-      }
-
       a {
         svg {
           padding-left: 4px;
@@ -439,6 +432,7 @@ main {
 
       p {
         margin: 0;
+        font-size: 1em;
       }
 
       span {
