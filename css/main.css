@@ -312,6 +312,7 @@ main section.awards div.award {
 main section.awards div.award p {
   margin: 0;
   width: 100%;
+  font-size: 1em;
 }
 main section.awards div.award span {
   font-weight: bold;
@@ -363,6 +364,7 @@ main section.extracurriculars div.award a svg:hover rect {
 }
 main section.extracurriculars div.award p {
   margin: 0;
+  font-size: 1em;
 }
 main section.extracurriculars div.award p.nolink {
   width: 100%;
@@ -440,10 +442,6 @@ footer section.logos {
 }
 
 @media only screen and (min-width: 500px) {
-  header #c_logo {
-    font-family: "Nabla";
-    padding-top: 0.5rem;
-  }
   header section svg.logo {
     display: block;
   }
@@ -474,6 +472,10 @@ footer section.logos {
   }
   .open {
     display: none;
+  }
+  header #c_logo {
+    font-family: "Nabla";
+    padding-top: 0.5rem;
   }
   header section svg.logo {
     padding: 5px;

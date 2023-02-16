@@ -368,6 +368,7 @@ main {
       p {
         margin: 0;
         width: 100%;
+        font-size: 1em;
       }
 
       span {
@@ -434,6 +435,7 @@ main {
 
       p {
         margin: 0;
+        font-size: 1em;
       }
 
       p.nolink {
@@ -535,11 +537,6 @@ footer {
 
 @media only screen and (min-width: 500px) {
   header {
-    #c_logo {
-      font-family: "Nabla";
-      padding-top: 0.5rem;
-    }
-
     section {
       svg.logo {
         display: block;
@@ -596,6 +593,11 @@ footer {
   }
 
   header {
+    #c_logo {
+      font-family: "Nabla";
+      padding-top: 0.5rem;
+    }
+
     section {
       svg.logo {
         padding: 5px;
