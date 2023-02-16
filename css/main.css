@@ -64,11 +64,12 @@ header section a {
   font-size: 1.2em;
 }
 header #c_logo {
-  font-family: "Nabla";
+  font-family: "Josefin Sans";
   font-size: 2.5rem;
   padding-right: 1.25rem;
+  padding-top: 0.5em;
   transition: font-size 0.25s linear;
-  color: white;
+  color: #ffa500;
 }
 header a {
   color: white;
@@ -161,7 +162,7 @@ nav ul a:hover {
 }
 
 .scrolled #c_logo {
-  font-size: 1.75rem;
+  font-size: 2rem;
   padding-right: 1.25rem;
 }
 .scrolled svg.open {
@@ -439,8 +440,15 @@ footer section.logos {
 }
 
 @media only screen and (min-width: 500px) {
+  header #c_logo {
+    font-family: "Nabla";
+    padding-top: 0.5rem;
+  }
   header section svg.logo {
     display: block;
+  }
+  .scrolled #c_logo {
+    font-size: 1.75rem;
   }
   main section.projects div.project-cards {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

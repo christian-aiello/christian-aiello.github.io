@@ -76,11 +76,12 @@ header {
   }
 
   #c_logo {
-    font-family: "Nabla";
+    font-family: "Josefin Sans";
     font-size: 2.5rem;
     padding-right: 1.25rem;
+    padding-top: 0.5em;
     transition: font-size 0.25s linear;
-    color: white;
+    color: $primary;
   }
 
   a {
@@ -183,7 +184,7 @@ nav {
 
 .scrolled {
   #c_logo {
-    font-size: 1.75rem;
+    font-size: 2rem;
     padding-right: 1.25rem;
   }
 
@@ -534,10 +535,21 @@ footer {
 
 @media only screen and (min-width: 500px) {
   header {
+    #c_logo {
+      font-family: "Nabla";
+      padding-top: 0.5rem;
+    }
+
     section {
       svg.logo {
         display: block;
       }
+    }
+  }
+
+  .scrolled {
+    #c_logo {
+      font-size: 1.75rem;
     }
   }
 
