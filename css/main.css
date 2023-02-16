@@ -223,7 +223,7 @@ main section.projects {
 main section.projects h1 {
   margin: 0 0;
   margin-bottom: 2rem;
-  font-size: min(8vw, 3em);
+  font-size: min(8vw, 2.5em);
   width: auto;
 }
 main section.projects h1 span {
@@ -239,19 +239,22 @@ main section.projects div.project-cards .card {
   padding: 2rem;
 }
 main section.projects div.project-cards .card p {
-  font-size: 1.2em;
+  font-size: 1em;
+  color: #ddd;
 }
 main section.projects div.project-cards .card p.technologies {
-  font-size: 1em;
+  font-size: 0.8em;
   margin-bottom: 0;
-  color: #ccc;
+  color: #aaa;
 }
 main section.projects div.project-cards .card img {
   width: 50%;
+  height: auto;
   min-width: min(225px, 100%);
   border-radius: 17px;
   border-color: #ccc;
   border-style: solid;
+  aspect-ratio: 1/1;
 }
 main section.projects div.project-cards .card div.project-img {
   display: flex;
@@ -291,14 +294,148 @@ main section.projects div.project-cards .card h1 {
 main section.projects div.project-cards .card h1 span {
   color: #ffa500;
 }
+main section.awards {
+  padding-top: 6em;
+}
+main section.awards div.award-cards {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+main section.awards div.award {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 0;
+}
+main section.awards div.award p {
+  margin: 0;
+  width: 100%;
+}
+main section.awards div.award span {
+  font-weight: bold;
+}
+main section.awards div.award svg {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  padding-right: 16px;
+  stroke: #ffa500;
+}
+main section.awards div.award svg path {
+  fill: #ffa500;
+}
 main section.awards h1 {
   margin: 0 0;
-  margin-bottom: 2rem;
-  font-size: min(8vw, 3em);
+  font-size: min(8vw, 2.5em);
   width: auto;
 }
 main section.awards h1 span {
   color: #ffa500;
+}
+main section.extracurriculars {
+  padding-top: 6em;
+  padding-bottom: 2em;
+}
+main section.extracurriculars div.award-cards {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+main section.extracurriculars div.award {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px 0;
+}
+main section.extracurriculars div.award a svg {
+  padding-left: 4px;
+}
+main section.extracurriculars div.award a svg:hover {
+  stroke: white;
+}
+main section.extracurriculars div.award a svg:hover path {
+  fill: white;
+}
+main section.extracurriculars div.award a svg:hover rect {
+  fill: white;
+}
+main section.extracurriculars div.award p {
+  margin: 0;
+}
+main section.extracurriculars div.award p.nolink {
+  width: 100%;
+}
+main section.extracurriculars div.award span {
+  font-weight: bold;
+}
+main section.extracurriculars div.award svg {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  padding-right: 16px;
+  stroke: #ffa500;
+}
+main section.extracurriculars div.award svg path {
+  fill: #ffa500;
+}
+main section.extracurriculars div.award svg rect {
+  fill: #ffa500;
+}
+main section.extracurriculars h1 {
+  margin: 0 0;
+  font-size: min(8vw, 2.5em);
+  width: auto;
+}
+main section.extracurriculars h1 span {
+  color: #ffa500;
+}
+main section.design p {
+  color: #ddd;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer {
+  width: calc(100vw - (100vw - 100%));
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+}
+footer section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin-bottom: 1em;
+}
+footer section a.logo {
+  padding: 0;
+}
+footer section svg.logo {
+  display: block;
+  width: 24px;
+  height: auto;
+  padding: 10px;
+  stroke: #ffa500;
+}
+footer section svg.logo path {
+  fill: #ffa500;
+}
+footer section svg.logo:hover {
+  stroke: white;
+}
+footer section svg.logo:hover path {
+  fill: white;
+}
+footer section a {
+  font-size: 1.2em;
+}
+footer section.logos {
+  margin-right: 0;
 }
 
 @media only screen and (min-width: 500px) {
@@ -307,6 +444,9 @@ main section.awards h1 span {
   }
   main section.projects div.project-cards {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  footer {
+    display: none;
   }
 }
 @media only screen and (min-width: 1020px) {

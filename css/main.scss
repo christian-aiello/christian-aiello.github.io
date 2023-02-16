@@ -259,7 +259,7 @@ main {
     h1 {
       margin: 0 0;
       margin-bottom: 2rem;
-      font-size: min(8vw, 3em);
+      font-size: min(8vw, 2.5em);
       width: auto;
 
       span {
@@ -277,25 +277,28 @@ main {
         padding: 2rem;
 
         p {
-          font-size: 1.2em;
+          font-size: 1em;
+          color: #ddd;
         }
 
         p.technologies {
-          font-size: 1em;
+          font-size: 0.8em;
           margin-bottom: 0;
-          color: #ccc;
+          color: #aaa;
         }
 
         img {
          width: 50%;
+         height: auto;
          min-width: min(225px, 100%);
          border-radius: 17px;
          border-color: #ccc;
          border-style: solid;
+         aspect-ratio: 1/1;
         }
 
         div.project-img {
-          display: flex;
+          display:flex;
           flex-direction: column;
           align-items: center;
           padding: 1rem;
@@ -346,16 +349,186 @@ main {
   }
 
   section.awards {
+    padding-top: 6em;
+
+    div.award-cards {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1em;
+    }
+
+    div.award {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px 0;
+      
+
+      p {
+        margin: 0;
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      svg {
+        width: 20px;
+        height: auto;
+        vertical-align: middle;
+        padding-right: 16px;
+  
+        stroke: $primary;
+  
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
     h1 {
       margin: 0 0;
-      margin-bottom: 2rem;
-      font-size: min(8vw, 3em);
+      font-size: min(8vw, 2.5em);
       width: auto;
 
       span {
         color: $primary;
       }
     }
+  }
+
+  section.extracurriculars {
+    padding-top: 6em;
+    padding-bottom: 2em;
+
+    div.award-cards {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1em;
+    }
+
+    div.award {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 0;
+
+      a {
+        svg {
+          padding-left: 4px;
+          &:hover {
+            stroke: white;
+    
+            path {
+              fill: white;
+            }
+
+            rect {
+              fill: white;
+            }
+          }
+        }  
+      }
+
+      p {
+        margin: 0;
+      }
+
+      p.nolink {
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      svg {
+        width: 20px;
+        height: auto;
+        vertical-align: middle;
+        padding-right: 16px;
+  
+        stroke: $primary;
+  
+        path {
+          fill: $primary;
+        }
+
+        rect {
+          fill: $primary;
+        }
+      }
+    }
+
+    h1 {
+      margin: 0 0;
+      font-size: min(8vw, 2.5em);
+      width: auto;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+
+  section.design {
+    p {
+      color: #ddd;
+      padding-bottom: 10px;
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+}
+
+footer {
+  width: calc(100vw - calc(100vw - 100%));
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 1em;
+
+    a.logo {
+      padding: 0;
+    }
+
+    svg.logo {
+      display: block;
+      width: 24px;
+      height: auto;
+      padding: 10px;
+
+      stroke: $primary;
+
+      path {
+        fill: $primary;
+      }
+
+      &:hover {
+        stroke: white;
+
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  section.logos {
+    margin-right: 0;
   }
 }
 
@@ -374,6 +547,10 @@ main {
           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         }
     }
+  }
+
+  footer {
+    display: none;
   }
 }
 
