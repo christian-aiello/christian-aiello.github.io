@@ -248,6 +248,9 @@ main section.projects div.project-cards .card p.technologies {
   color: #aaa;
 }
 main section.projects div.project-cards .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   height: auto;
   min-width: min(225px, 100%);
@@ -257,9 +260,6 @@ main section.projects div.project-cards .card img {
   aspect-ratio: 1/1;
 }
 main section.projects div.project-cards .card div.project-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 1rem;
 }
 main section.projects div.project-cards .card .card-header {

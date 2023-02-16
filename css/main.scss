@@ -288,6 +288,9 @@ main {
         }
 
         img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
          width: 50%;
          height: auto;
          min-width: min(225px, 100%);
@@ -298,9 +301,6 @@ main {
         }
 
         div.project-img {
-          display:flex;
-          flex-direction: column;
-          align-items: center;
           padding: 1rem;
         }
 
